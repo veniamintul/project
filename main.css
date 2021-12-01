@@ -3,17 +3,29 @@ body {
    
 }
 
-.wrapper {
-    position: static;
+/*.wrapper {                      какие правила для .wrapper правильные?(img/1.png тут тоже не работает)
+    position: absolute;
     display: inline-block;
+    height: 2930px;
+    width: 1920px;
+    left: 0px;
+    top:0px;
     background-image: url('img/1.png') center top no-repeat;
     background-image: url('img/2.png') center bottom 165px no-repeat;
+}*/
+.wrapper {
+  position: relative;
+  /*display: inline-block;*/  /*нужно ли тут прописывать inlaine-block? И если нет то почему?.wrapper же по идее
+                               и как блок и как строка должен работать */
+  height: 2930px;
+  width: 1920px;
 }
 
 .wrapper__img{
-    background-image: url('img/1.png');
+    background-image: url('img/1.png');   /*я не пойму почему эта картинка не отбражается? Путь же верный вроде*/
     position: absolute;
-    background-position: top;
+    /*background-position: top;*/
+    top: 0px;
     height: 1202px;
     width: 1920px;
 }
@@ -25,30 +37,371 @@ body {
     height: 893px;
     width: 1920px;
 }
+
+
+.header{
+  margin-top:26px ;
+  margin-right:390px ;
+  margin-left:390px ;
+  position: relative  ;
+  width: 1141px;
+  height: 123.36px; 
+}
+
 .header__logo{
     background-image: url('img/logo.png');
     position: absolute;
-    top:29px;
-    left:290px;
+    margin-top:2px ;
+    margin-left:1px ;
+    margin-bottom: 85px;
     z-index: 10px;
     height: 36px;
     width: 85px;
+}
+
+.menu{                    /*размеры по макету задал в пикселях но почему-то с Perfect-Pixel не совпали по ширине*/
+  position: absolute;
+  margin-top:15.36px;
+  margin-right: 713px;
+  margin-bottom: 89px;
+  margin-left:164px;
+  height: 19px;
+  width: 264px;
+}
+
+.menu__link-gl{
+  position: absolute;
+  top: 0px;
+  margin-right: 208px;
+  font-family:OpenSans;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.menu__link-u{
+  position: absolute;
+  top:0px;
+  margin-right: 108;
+  margin-left: 110px;
+  font-family:OpenSans;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.menu__link-o{
+  position: absolute;
+  top: 0px; 
+  margin-left: 210px;
+  font-family:OpenSans;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.contacts__top{
+  position: absolute;
+  margin-top: 0px;
+  right: 0px;      /*вопрос: почему margin-right не работает? смещает влево(!) до нуля */
+  margin-bottom:88.36px;
+  /*left: 950px;*/
+  font-family:OpenSans;
+  font-size: 26px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-style: normal;
+}
+
+.contacts__graph{
+  position: absolute;
+  margin-top:28.5px;
+  right: 4px;
+  margin-bottom:74.86px;
+  font-family:OpenSans;
+  font-size: 13px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  text-decoration: underline;
+  font-style: normal;   
+}
+
+.preview{
+  margin-top:196px ;
+  margin-bottom: 673px;
+  margin-left:390px ;
+  position: relative  ;
+  width: 511px;
+  height: 333px; 
+}
+.preview__title{
+  position: absolute;
+  margin-top: 0px;
+  margin-bottom: 136px;
+  width: 511px;
+  height: 197px;
+  font-family:OpenSans;
+  font-size: 72px;
+  line-height: 84px;
+  display: flex;
+  align-items: flex-end;
+  color: #FFFFFF;
+  text-decoration: underline;
+  font-style: normal;
+  text-decoration: none  
+}
+.preview__text{
+  position: absolute;
+  margin-top: 224.5px;
+  margin-right:315px ;
+  margin-bottom: 88.5px;
+  width: 196px;
+  height: 20px;
+  font-family:OpenSans;
+  font-size: 18px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  text-decoration: underline;
+  font-style: normal;
+  text-decoration: none  
+}
+.preview__button{
+position: absolute;
+margin-right:278px ;
+margin-top: 343px;
+width: 168px;
+height: 55px;
+}
+/*кнопку задекорировать*/
+
+.features {
+  margin-top:775px ;
+  margin-right: 390px;
+  margin-left:390px;
+  position: relative;
+  width: 1140px;
+  height: 549px;   
+}
+.features__content{
+position: absolute;
+margin-top:0px ;
+margin-right: 864px;
+margin-left:3px;
+
+}
+
+.news{
+  margin-top:1451px ;
+  margin-right: 390px;
+  margin-left:390px;
+  position: relative;
+  width: 1139px;
+  height: 600px;   
+}
+.about{
+  margin-right: 390px;
+  margin-bottom:203px ;
+  margin-left:390px;
+  position: relative;
+  width: 1139px;
+  height: 552px; 
+}
+.footer{
+  border-top:solid 4px #FFFFFF;
+  margin-right: 390px;
+  margin-bottom:57.36px ;
+  margin-left:390px;
+  position: relative;
+  width: 1142px;
+  height: 93px;
+
+}
+.footer__logo{
+  background-image: url('img/logo.png');
+  position: absolute;
+  margin-top:50px ;
+  margin-bottom: 7.64px;
+  margin-left:1px ;
+  z-index: 10px;
+  height: 36px;
+  width: 85px;
+}
+.footer__menu{        
+  position: absolute;
+  margin-top:63px;
+  margin-right: 713px;
+  margin-bottom: 10px;
+  margin-left:165px;
+  height: 19px;
+  width: 264px;
+}
+
+.menu__link-gl{
+  position: absolute;
+  top: 0px;
+  margin-right: 208px;
+  font-family:OpenSans;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.menu__link-u{
+  position: absolute;
+  top:0px;
+  margin-right: 108;
+  margin-left: 110px;
+  font-family:OpenSans;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.menu__link-o{
+  position: absolute;
+  top: 0px; 
+  margin-left: 210px;
+  font-family:OpenSans;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.socials{               /*Я так и не понял почему у меня слипаются в единое целое иконки*/
+  position: relative;
+  margin-top:53px;
+  margin-right: 265px;
+  margin-bottom: 3px;
+  margin-left:703px;
+  height: 36px;
+  width: 174px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.social__item{
+position: absolute;
+top:0px;
+margin-right: 138px;
+margin-bottom: 0px;
+margin-left:0px;
+margin-top:0px;
+margin-bottom: 0px;
+margin-left:138px;
+height: 36px;
+width: 36px;
+background-image: url('img/telegram.png'); 
+display: block;
+}
+
+.social__item{
+  position: absolute;
+  margin-top:0px;
+  margin-right: 92px;
+  margin-bottom: 0px;
+  margin-left:46px;
+  height: 36px;
+  width: 36px;
+  background-image: url('img/vk.png'); 
+  display: block;
+}
+
+.social__item{
+  position: absolute;
+  margin-top:0px;
+  margin-right: 46px;
+  margin-bottom: 0px;
+  margin-left: 46px;
+  height: 36px;
+  width: 36px;
+  background-image: url('img/f.png');
+  display: block; 
+}
+
+.social__item{
+  position: absolute;
+  margin-top:0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left:138px;
+  height: 36px;
+  width: 36px;
+  background-image: url('img/in.png');
+  display: block;
+}
+
+
+.footer__contacts{
+  position: absolute;
+  margin-top: 73px;
+  right: 0px;      /*вопрос: почему margin-right не работает? смещает влево(!) до нуля */
+  margin-bottom:88px;
+  font-family:OpenSans;
+  font-size: 26px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-style: normal;
+}
+.contacts__graph{
+  position: absolute;
+  margin-top:47px;
+  right: 0px;
+  margin-bottom:26px;
+  font-family:OpenSans;
+  font-size: 11px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  text-decoration: underline;
+  font-style: normal;   
 }
 
 
 
 
 
+  
 
 
 
-/*.footer-right{
-    text-align: right;
-    margin-left: 461px;
-    margin-top: -63px;
-    
-  }
-  .social-items{
+
+
+
+
+
+
+
+
+
+  /*.social-items{
     display: inline-block;
     vertical-align: middle;
     margin-left:5px; 
