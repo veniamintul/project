@@ -1,5 +1,6 @@
 body {
-    background-color: #001821 ;
+    background: #001821 ;
+    margin:0;
    
 }
 
@@ -14,30 +15,13 @@ body {
     background-image: url('img/2.png') center bottom 165px no-repeat;
 }*/
 .wrapper {
-  position: relative;
-  /*display: inline-block;*/  /*нужно ли тут прописывать inlaine-block? И если нет то почему?.wrapper же по идее
-                               и как блок и как строка должен работать */
+  position: relative;                        
   height: 2930px;
   width: 1920px;
-}
+  background:   url('img/1.png') center top 0  no-repeat,
+  url('img/2.png') center bottom 165px no-repeat;
 
-.wrapper__img{
-    background-image: url('img/1.png');   /*я не пойму почему эта картинка не отбражается? Путь же верный вроде*/
-    position: absolute;
-    /*background-position: top;*/
-    top: 0px;
-    height: 1202px;
-    width: 1920px;
 }
-.wrapper__img{
-    background-image: url('img/2.png');
-    position: absolute;
-    top:1872px;
-    bottom:165px;
-    height: 893px;
-    width: 1920px;
-}
-
 
 .header{
   margin-top:26px ;
@@ -45,7 +29,7 @@ body {
   margin-left:390px ;
   position: relative  ;
   width: 1141px;
-  height: 123.36px; 
+  height: 124px; 
 }
 
 .header__logo{
@@ -67,6 +51,9 @@ body {
   margin-left:164px;
   height: 19px;
   width: 264px;
+}
+.menu__list{
+  list-style:none;
 }
 
 .menu__link-gl{
@@ -140,13 +127,41 @@ body {
   font-style: normal;   
 }
 
+
+
+
+
+
+
+
+
+.main{
+  width: 1920px;
+  height: 2630px; 
+  margin-top:150px ;
+  margin-right:390px ;
+  margin-left:390px ;
+  position: relative  ;
+  display: block;
+}
+
+
+
+
+
+
+
+
+
+
 .preview{
-  margin-top:196px ;
-  margin-bottom: 673px;
+  margin-top:46px ;
+  margin-right:1019px ;
   margin-left:390px ;
   position: relative  ;
   width: 511px;
   height: 333px; 
+
 }
 .preview__title{
   position: absolute;
@@ -166,9 +181,8 @@ body {
 }
 .preview__text{
   position: absolute;
-  margin-top: 224.5px;
   margin-right:315px ;
-  margin-bottom: 88.5px;
+  margin-bottom: 89px;
   width: 196px;
   height: 20px;
   font-family:OpenSans;
@@ -187,24 +201,176 @@ margin-right:278px ;
 margin-top: 343px;
 width: 168px;
 height: 55px;
+background: #F5170E;
+border-radius: 35px;
+
+border: 1px;
+border-style:solid;
+border-color: brown;
+padding: 18px 40px; 
+font-weight: 12px;
+text-decoration: none;
+
+font-family: OpenSans;
+font-size: 14px;
+line-height: 16px;
+display: flex;
+align-items: center;
+color: #FFFFFF;
 }
-/*кнопку задекорировать*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .features {
   margin-top:775px ;
-  margin-right: 390px;
-  margin-left:390px;
+  margin-right: 391px;
+  margin-left:389px;
   position: relative;
   width: 1140px;
   height: 549px;   
 }
-.features__content{
-position: absolute;
+.features__content-one{
+display:inline-block;
+position: relative;
 margin-top:0px ;
-margin-right: 864px;
-margin-left:3px;
+margin-right: 831px;
+margin-bottom: 500px;
+margin-left:0px;
+height: 49px;
+width: 306px;
 
 }
+
+.features__text-hot{         /*   !!!!!!*/ 
+position: absolute;
+margin-right: 0px;
+vertical-align: middle;
+font-family:OpenSans;
+font-size: 36px;
+line-height: 42px;
+color: #FFFFFF;
+text-decoration: none;
+display: flex;
+align-items: flex-end;
+}
+
+.features__list{
+  list-style:none;
+}
+
+
+
+.features__img-flame{ 
+  position: relative;                        
+  height: 28px;
+  width: 21px;
+  background:  url('img/flame(1).png')  no-repeat;
+  vertical-align: middle;
+  margin-left:285px ;
+}
+
+.features__list{
+list-style:none;
+}
+
+.features__container-one{         /*   !!!!!!*/ 
+  margin-top: 100px; 
+  margin-right: 778px;
+  margin-left:0px;
+  height: 449px;
+  width: 362px;
+  display: inline-block;
+  position: relative;
+  background: #FFFFFF;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.features__img-one{
+  height: 144px;
+  width: 362px;
+  position: absolute;
+  margin-top: 0px; 
+  background:  url('img/river.png')  no-repeat;
+}
+
+/*.features__content-one{
+  height: 144px;
+  width: 305px;
+  position: relative;
+  margin-top: 144px; 
+}
+
+.features__subtitle{
+position: absolute;
+width: 108px;
+height: 33px;
+margin-top: 33px;
+margin-right: 232px;
+margin-bottom: 239px;
+margin-left: 22px;
+
+font-family: OpenSans;
+font-size: 24px;
+line-height: 28px;
+display: flex;
+align-items: flex-end;
+color: #000000;
+}
+
+
+.features__desk-block{
+position: absolute;
+width: 90px;
+height: 22px;
+margin-top: 89px;
+margin-right: 208px;
+margin-bottom: 194px;
+margin-left: 64px;
+font-family: OpenSans;
+font-size: 16px;
+line-height: 19px;
+display: flex;
+align-items: center;
+color: #666666;
+}
+
+
+.features__desk-block-img{
+  height: 26px;
+  width: 26px;
+  position: absolute;
+  margin-top: 87px;
+  margin-right: 308px;
+  margin-bottom: 192px;
+  margin-left: 28px;
+  background:  url('img/calendar.png')  no-repeat;
+}*/
+
+
+
+
+
+
+
+
+
+
+
 
 .news{
   margin-top:1451px ;
@@ -222,10 +388,16 @@ margin-left:3px;
   width: 1139px;
   height: 552px; 
 }
+
+
+
+
+
+
 .footer{
   border-top:solid 4px #FFFFFF;
   margin-right: 390px;
-  margin-bottom:57.36px ;
+  margin-bottom:58px ;
   margin-left:390px;
   position: relative;
   width: 1142px;
@@ -250,6 +422,10 @@ margin-left:3px;
   margin-left:165px;
   height: 19px;
   width: 264px;
+}
+
+.menu__list{
+  list-style:none;
 }
 
 .menu__link-gl{
@@ -292,65 +468,51 @@ margin-left:3px;
   text-decoration: none;
 }
 
-.socials{               /*Я так и не понял почему у меня слипаются в единое целое иконки*/
-  position: relative;
+.socials{ 
+  position: relative;             
   margin-top:53px;
+  margin-left:703px;
   margin-right: 265px;
   margin-bottom: 3px;
-  margin-left:703px;
   height: 36px;
   width: 174px;
-  display: inline-block;
-  vertical-align: middle;
 }
+
+.socials__list{
+  list-style: none;
+}
+
 .social__item{
-position: absolute;
-top:0px;
-margin-right: 138px;
-margin-bottom: 0px;
-margin-left:0px;
-margin-top:0px;
-margin-bottom: 0px;
-margin-left:138px;
-height: 36px;
+  vertical-align: middle; 
+  margin-left:10px;
+  display: inline-block;
+}
+
+.social__item__tg{
 width: 36px;
-background-image: url('img/telegram.png'); 
+height: 36px;
 display: block;
 }
 
-.social__item{
-  position: absolute;
-  margin-top:0px;
-  margin-right: 92px;
-  margin-bottom: 0px;
-  margin-left:46px;
-  height: 36px;
+.social__item__vk{
+ 
   width: 36px;
-  background-image: url('img/vk.png'); 
+  height: 36px;
+  display: block;
+
+}
+
+.social__item__fb{
+ 
+  width: 36px;
+  height: 36px;
   display: block;
 }
 
-.social__item{
-  position: absolute;
-  margin-top:0px;
-  margin-right: 46px;
-  margin-bottom: 0px;
-  margin-left: 46px;
-  height: 36px;
-  width: 36px;
-  background-image: url('img/f.png');
-  display: block; 
-}
+.social__item__instagram{
 
-.social__item{
-  position: absolute;
-  margin-top:0px;
-  margin-right: 0px;
-  margin-bottom: 0px;
-  margin-left:138px;
-  height: 36px;
   width: 36px;
-  background-image: url('img/in.png');
+  height: 36px;
   display: block;
 }
 
@@ -421,3 +583,53 @@ display: block;
     height: 30px;
     display: block;
   }*/
+
+
+
+ /* .wrapper__img{
+    background-image: url('img/1.png');  
+    position: absolute;
+    background-position: top;
+    top: 0px;
+    height: 1202px;
+    width: 1920px;
+}
+.wrapper__img{
+    background-image: url('img/2.png');
+    position: absolute;
+    top:1872px;
+    bottom:165px;
+    height: 893px;
+    width: 1920px;
+}*/
+
+
+
+
+
+
+
+
+
+/*.button{
+	border: 2px;
+	border-style:solid;
+	color: #e85f61;
+	border-radius:40px;
+  padding: 7px 15px; 
+  font-weight: 12px;
+  text-decoration: none;
+  -webkit-transition: 2s;
+  -o-transition: 2s;
+  transition: 2s;  
+}
+.button__text,.button__icon{
+	display: inline-block;
+  vertical-align: middle;
+}
+.button:hover{
+  background:  #e85f61;
+  color: #ffffff;
+  border: #e85f61 2px;
+  text-decoration-color:#ffffff; 
+}
