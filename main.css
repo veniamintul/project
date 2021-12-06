@@ -142,6 +142,7 @@ body {
       }
       
       .preview__button{
+        margin-top:35;
         background: #F5170E;
         border-radius: 35px;
         border: 1px;
