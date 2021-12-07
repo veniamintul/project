@@ -6,6 +6,12 @@ body {
    
 }
 
+* {
+  box-sizing: border-box;
+}
+
+
+
 .wrapper {
   overflow-x: hidden;
   position: relative;                       
@@ -14,12 +20,13 @@ body {
   url('img/2.png') center bottom 165px no-repeat;
 
 }
-
+.container{
+  width: 1140px;
+  margin:0 auto;
+}
 
 .header{
-    /* Если margin-left убрать съезжает влево до конца*/
-    margin-left:390px;
-    position: relative;
+    position: absolute;
     height:150px;
     width: 1140px;
     }
@@ -100,8 +107,7 @@ body {
 
 
     .preview{
-        margin-top:50px ;
-        margin-left:390px ;
+        top:150px ;
         position: relative  ;
         display: block;
         width: 510px;
@@ -160,81 +166,96 @@ body {
       
 .features {
         margin-top:250px ; 
-        margin-left: 390px;
-        width: 1140px;
-        height: 600px; 
+
 }
 
 .features__content{
         display: inline-block;
         }       
   
- /*почему чтобы вставить огонем мне нужно прописывать inline-block  и для этого элемента*/
+ 
 .features__text-hot {
             display: inline-block;     
-            margin-top:0px ;
-            margin-left: 0px;       
             font-family: OpenSans;
             font-size: 36px;
             line-height: 42px;
             color: #FFFFFF;
-            width: 250px;
+            
         }   
 
 .features__img1{ 
-                              
-        background:  url('img/flame.png')  no-repeat;
         margin-top: 10px;
         margin-left:20px;
         width: 21px;
         height: 28px;
         } 
  
-
-
-
-
 .features__list{
-        /*margin-left: 0px;*/
-        margin-top: 20px;
-        list-style:none;
-        margin:0px;
+  padding-left:0px;     /*oткуда взялся паддинг слева*/
+}
 
-        }
-/*Почему блоки  Li не помещаются  в родительский lu?*/
+
 .features__item{
         display: inline-block;
-        background:  url('img/river.png')  no-repeat top 0 left 390, url('img/pool.png')  no-repeat top 0 left 780
-        ,url('img/ocean.png')  no-repeat top 0 right 390;
+        left: 0px;
         width: 362px;
         height: 450px;
-        margin-right: 27px;
-        align-items: center; 
         background:#FFFFFF; 
-        /*Почему у меня увеличился родительский блок?*/
-        padding: 0  22px;
-        position: relative;
+        margin-right: 15px;
+        border-radius: 4px;
         }
+
+
+.features__img{
+  min-height: 144px;
+  min-width: 360px;
+  margin-bottom: 20px;
+}
 
 
 .features__item:last-child{
             margin-right: 0px;
         }
-/*Нужен ли здесь этот селектор?
-         .features__container{ 
-            width: 360px;
-            height: 454px;
-            margin-left: 0px;
-            align-items: center;}*/
 
-        
 
-.features__desk-block{
-    width: 120px;
-    display: inline-block;
+    
+.features__subtitle {
+font-family: OpenSans;
+font-size: 24px;
+line-height: 28px;
+color: #000000;
+padding-left: 22px;
+padding-top: 0px;
+
+} 
+
+
+.features__text{
+  padding-left: 22px;
+  font-family: OpenSans;
+  font-size: 14px;
+  line-height: 21px;
+  color: #303030;
 }
 
-/*Почему не реагирует на запрос паддинг?*/
+
+.features__desk-block{
+    width: 150px;
+    display: inline-block;
+    padding-left: 22px;
+    padding-right: 22px;
+    
+}
+.features__desk-block:last-child{
+  margin-right: 0px;
+}
+
+
+
+.features__button{
+  padding-left: 20px;
+  padding-top: 30px;
+}
 
 .features__button-text{
 position: absolute;
@@ -253,6 +274,8 @@ line-height: 16px;
 display: flex;
 align-items: center;
 color: #FFFFFF;
+
+
 }
 
 .features__button-text:hover{
@@ -270,6 +293,8 @@ color: #FFFFFF;
     display: flex;
     align-items: center;
     color: #F5170E;
+    
+    
     }
 
 
@@ -280,7 +305,7 @@ color: #FFFFFF;
 
 .news{
     margin-top:130px ;
-    margin-left:390px; 
+    
     }
 
 .news__title{
@@ -292,21 +317,22 @@ align-items: flex-end;
 color: #FFFFFF;
      }
 
+.news__list{
+  padding-left: 0px;  /*oткуда взялся паддинг слева*/
+}
 
 
-/*почему блоки не становятся вровень с .news__title*/     
+ /*меняется только одна из карточек. Текст вообще слетел*/   
 .news__item{
 display: inline-block;
-width: 560px;
+width: 500px;
 height: 390px;
-margin-right: 40px;
 vertical-align: top; 
-/*Почему у меня увеличился родительский блок?*/
-position: relative;
+margin-right: 15px;
+border-radius: 4px;
 }
 
 .news__content{
-    position: absolute;
     bottom: 30px;
     top:252px;
     left:32px;
@@ -328,8 +354,6 @@ color: #FFFFFF;
 font-family: OpenSans;
 font-size: 24px;
 line-height: 36px;
-display: flex;
-align-items: center;
 color: #FFFFFF;
 }
 
@@ -337,8 +361,6 @@ color: #FFFFFF;
 font-family: OpenSans;
 font-size: 16px;
 line-height: 21px;
-display: flex;
-align-items: center;
 color: #FFFFFF;
 }
 
@@ -384,8 +406,7 @@ color: #FFFFFF;
 /*блок не получился совсем */
 
 .about{
-    margin-bottom:160px ;
-    margin-left:390px;
+    margin-top:200px ;
     display: inline-block;
     /*width: 1140px;
     height: 552px; */
@@ -455,12 +476,10 @@ color: #FFFFFF;
 
   .footer{
     border-top:solid 1px #FFFFFF;
-    margin-right: 390px;
     margin-bottom:50px ;
-    margin-left:390px;
     position: relative;
     width: 1140px;
-    height: 100px;
+    height: 150px;
   }
   .footer__logo{
     position: absolute;
@@ -544,7 +563,7 @@ color: #FFFFFF;
   
   .contacts__graph-bottom{
     position: absolute;
-    top:40px;
+    bottom:84px;
     right: 0px;
     font-family:OpenSans;
     font-size: 13px;
@@ -561,7 +580,7 @@ color: #FFFFFF;
   
   .contacts-bottom{
     position: absolute;
-    top: 69px;
+    bottom: 58px;
     right: 0px;      
     font-family:OpenSans;
     font-size: 26px;
