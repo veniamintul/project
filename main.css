@@ -3,6 +3,7 @@ body {
     margin:0px;
     width:100%;
     height:100%;
+    font-family: "Open Sans";
    
 }
 
@@ -43,8 +44,8 @@ body {
     .menu{
         position: absolute;
         display: inline-block;
-        top:10px;
-        left:50%;
+        top:5px;
+        left:270px;
         transform: translate(-50%);
     }
     
@@ -127,6 +128,8 @@ body {
       
       
       .preview__title{
+        position: absolute;
+        top: 0px;
         font-family:OpenSans;
         font-size: 72px;
         line-height: 84px;
@@ -138,7 +141,8 @@ body {
       }
       
       .preview__text{
-        margin-top: 28px;
+        position: absolute;
+        top: 230px;
         font-family:OpenSans;
         font-size: 18px;
         line-height: 20px;
@@ -148,7 +152,8 @@ body {
       }
       
       .preview__button{
-        margin-top:35;
+        position: absolute;
+        top: 300px;
         background: #F5170E;
         border-radius: 35px;
         border: 1px;
@@ -165,7 +170,7 @@ body {
         }
       
 .features {
-        margin-top:250px ; 
+        margin-top:405px ; 
 
 }
 
@@ -325,25 +330,40 @@ color: #FFFFFF;
  /*меняется только одна из карточек. Текст вообще слетел*/   
 .news__item{
 display: inline-block;
-width: 500px;
-height: 390px;
+width: 550px;
+/*height: 390px;*/
 vertical-align: top; 
 margin-right: 15px;
 border-radius: 4px;
+position: relative;
+overflow: hidden;
+}
+.news__item:last-child{
+  margin-right: 0px;
+}
+
+.news__img{
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .news__content{
-    bottom: 30px;
-    top:252px;
-    left:32px;
+  position: absolute;
+  left: 0px; 
+  bottom: 0px;
+  left:0px;
+  padding: 25px 30px;
+  min-height: 140px;
 }
 /*Почему не встали в один ряд?*/
 .news__date{
-    display: inline-block;
-    width: 200px;
+    min-width: 200px;
 }
 
 .news__date-month,.news__date-year{
+display: inline-block;
 font-family: OpenSans;
 font-size: 14px;
 line-height: 21px;
@@ -374,14 +394,9 @@ color: #FFFFFF;
 
 .paginator{
     text-align: center;
+    margin-top: 60px;
 }
-/*Почему не сработало?*/
-.paginator__link__1{
-    background:#FFFFFF ;
-    border-radius: 50%;
-    color: red;
-    padding:5px 8px ;
-}
+
 
 .paginator__display,.paginator__display-current,.paginator__display-all{
 font-family: OpenSans;
@@ -390,14 +405,29 @@ line-height: 20px;
 color: #FFFFFF;
 }
 
-.paginator__link__1,.paginator__link{
+.paginator__display{
+  margin-right: 25px;
+}
+
+.paginator__link{
 font-family: OpenSans;
 font-size: 16px;
 line-height: 21px;
-display: flex;
+display: block;
 align-items: center;
 color: #FFFFFF;
+text-decoration: none;
+margin-right: 25px;
 
+}
+
+/*Почему не сработало?*/
+.paginator__link:hover{
+  background:#FFFFFF ;
+  border-radius: 50%;
+  color: red;
+  padding:5px 10px ;
+  text-decoration: none;
 }
 
 
@@ -406,32 +436,52 @@ color: #FFFFFF;
 /*блок не получился совсем */
 
 .about{
-    margin-top:200px ;
-    display: inline-block;
-    /*width: 1140px;
-    height: 552px; */
+    margin-top:150px ;
   }
 
 
-  .about__img,.about__img--one{
+  .about__img,.about__sidebar{
       display: inline-block;
       vertical-align: top;
   }
 
-  .about__img{
+  .about__img--one{
     width: 490px;
     height: 505px;
   }
 
-  .about__img--one{
-  width: 785px;
-  height: 455px;
-  margin-top:100px;
-  margin-left: -150px;
-  padding: 70px 66px 81px;
+
+  .about__sidebar{
+    /*padding: 70px 66px 81px;*/
+    width: 785px;
+    height: 455px;
+    margin-top:100px;
+    margin-left: -150px;
+    position: relative;
+    overflow: hidden;
+
   }
 
+  .about__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  }
+
+
+
   .about__content{
+    padding: 100px 90px;
+    position: absolute;
+    width: 500px;
+    height: 380px;
+    
+  }
+  .about__text{
+    position: absolute;
+    margin-top: -30px;
     font-family: OpenSans;
     font-size: 36px;
     line-height: 42px;
@@ -439,15 +489,26 @@ color: #FFFFFF;
   }
 
   .about__title{
+    bottom:100px ;
+    position: absolute;
     font-family: OpenSans;
     font-size: 16px;
     line-height: 27px;
     color: #060606;
+    min-width: 502px;
+    min-height: 135px
+  }
+
+
+  .about__button{
+    position: absolute;
+    padding-bottom:280px ;
+    /*position: relative;*/
   }
 
   .about__button-text{
     position: absolute;
-    padding-bottom: 26px;  
+    bottom: 0px; 
     background: #F5170E;
     border-radius: 35px;
     border: 1px;
@@ -462,7 +523,7 @@ color: #FFFFFF;
     display: flex;
     align-items: center;
     color: #FFFFFF;
-
+  
   }
 
 
@@ -475,6 +536,8 @@ color: #FFFFFF;
 
 
   .footer{
+    margin-top:50px ;
+    margin-left: 0px;
     border-top:solid 1px #FFFFFF;
     margin-bottom:50px ;
     position: relative;
@@ -483,16 +546,15 @@ color: #FFFFFF;
   }
   .footer__logo{
     position: absolute;
-    margin-top:50px ;
-    margin-bottom: 8px;
-    margin-left:0px ;
+    bottom:60px ;
+    left:0px ;
   }
  
   .footer__menu{
-          position: relative;
+          position: absolute;
           display: inline-block;
-          top:10px;
-          left:50%;
+          bottom:60px;
+          left: 130px;;
         
       }
       
@@ -523,8 +585,8 @@ color: #FFFFFF;
   
   .socials{ 
     position: relative;             
-    margin-top:50px;
-    margin-left:703px;
+    margin-top:45px;
+    margin-left:650px;
     margin-bottom: 3px;
   }
   
