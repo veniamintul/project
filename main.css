@@ -3,14 +3,21 @@ body {
     margin:0px;
     width:100%;
     height:100%;
-    font-family: "Open Sans";
-   
+    font-family: "Open Sans";  
 }
-
 * {
   box-sizing: border-box;
 }
 
+ul, li{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+margin: 0;
+}
 
 
 .wrapper {
@@ -27,9 +34,9 @@ body {
 }
 
 .header{
-    position: absolute;
+    position: relative;
     height:150px;
-    width: 1140px;
+    /*width: 1140px;*/
     }
     
     
@@ -44,14 +51,14 @@ body {
     .menu{
         position: absolute;
         display: inline-block;
-        top:5px;
-        left:270px;
+        top:25px;
+        left:300px;
         transform: translate(-50%);
     }
     
-    .menu__list{
+    /*.menu__list{
         list-style:none;
-    }
+    }*/
     
     .menu__item{
         display: inline-block;
@@ -64,13 +71,13 @@ body {
     }
     
     .menu__link{
-        font-family:OpenSans;
-        font-size: 14px;
+        top: 0;
+       /* font-size: 14px;
         line-height: 16px;
         display: flex;
         align-items: center;
         color: #FFFFFF;
-        text-decoration: none;
+        text-decoration: none;*/
     }
     
     .contacts{
@@ -80,7 +87,6 @@ body {
     }
     
     .contacts__top{
-        font-family:OpenSans;
         font-size: 26px;
         line-height: 30px;
         display: flex;
@@ -92,7 +98,6 @@ body {
     
     
     .contacts__graph{
-        font-family:OpenSans;
         font-size: 13px;
         line-height: 16px;
         display: flex;
@@ -108,29 +113,18 @@ body {
 
 
     .preview{
-        top:150px ;
+        top:-20px ;
         position: relative  ;
         display: block;
-        width: 510px;
+        width: 520px;
         height: 350px;
       }
       
       
       
-      
-      
-      .preview{
-        padding-top:0px ;
-        width: 511px;
-        height: 333px;
-      
-      }
-      
-      
       .preview__title{
-        position: absolute;
-        top: 0px;
-        font-family:OpenSans;
+        /*position: absolute;*
+        top: 0px;*/
         font-size: 72px;
         line-height: 84px;
         display: flex;
@@ -141,19 +135,16 @@ body {
       }
       
       .preview__text{
-        position: absolute;
-        top: 230px;
-        font-family:OpenSans;
         font-size: 18px;
         line-height: 20px;
         color: #FFFFFF;
         font-style: normal;
-        text-decoration: none  
+        text-decoration: none; 
+        margin-top: -15px;
       }
       
       .preview__button{
-        position: absolute;
-        top: 300px;
+        margin-top: 35px;
         background: #F5170E;
         border-radius: 35px;
         border: 1px;
@@ -170,7 +161,7 @@ body {
         }
       
 .features {
-        margin-top:405px ; 
+        margin-top:170px ; 
 
 }
 
@@ -181,7 +172,6 @@ body {
  
 .features__text-hot {
             display: inline-block;     
-            font-family: OpenSans;
             font-size: 36px;
             line-height: 42px;
             color: #FFFFFF;
@@ -189,14 +179,15 @@ body {
         }   
 
 .features__img1{ 
-        margin-top: 10px;
-        margin-left:20px;
+        margin-top: 1px;
+        margin-left:15px;
         width: 21px;
         height: 28px;
         } 
  
 .features__list{
-  padding-left:0px;     /*oткуда взялся паддинг слева*/
+  padding-left:0px;
+  padding-top: 25px;    
 }
 
 
@@ -225,7 +216,6 @@ body {
 
     
 .features__subtitle {
-font-family: OpenSans;
 font-size: 24px;
 line-height: 28px;
 color: #000000;
@@ -236,8 +226,8 @@ padding-top: 0px;
 
 
 .features__text{
+  padding-top: 30px;
   padding-left: 22px;
-  font-family: OpenSans;
   font-size: 14px;
   line-height: 21px;
   color: #303030;
@@ -245,7 +235,7 @@ padding-top: 0px;
 
 
 .features__desk-block{
-    width: 150px;
+    width: 160px;
     display: inline-block;
     padding-left: 22px;
     padding-right: 22px;
@@ -263,17 +253,15 @@ padding-top: 0px;
 }
 
 .features__button-text{
-position: absolute;
-padding-bottom: 26px;  
+/*position: absolute;
+padding-bottom: 26px; */ 
 background: #F5170E;
 border-radius: 35px;
 border: 1px;
 border-style:solid;
 border-color: #F5170E;
 padding: 18px 40px; 
-font-weight: 12px;
 text-decoration: none;
-font-family: OpenSans;
 font-size: 14px;
 line-height: 16px;
 display: flex;
@@ -290,9 +278,7 @@ color: #FFFFFF;
     border-style:solid;
     border-color: #F5170E;
     padding: 18px 40px; 
-    font-weight: 12px;
     text-decoration: none;
-    font-family: OpenSans;
     font-size: 14px;
     line-height: 16px;
     display: flex;
@@ -314,7 +300,6 @@ color: #FFFFFF;
     }
 
 .news__title{
-font-family: OpenSans;
 font-size: 36px;
 line-height: 42px;
 display: flex;
@@ -323,11 +308,12 @@ color: #FFFFFF;
      }
 
 .news__list{
-  padding-left: 0px;  /*oткуда взялся паддинг слева*/
+  padding-left: 0px;
+  padding-top: 30px;  
 }
 
 
- /*меняется только одна из карточек. Текст вообще слетел*/   
+    
 .news__item{
 display: inline-block;
 width: 550px;
@@ -352,33 +338,30 @@ overflow: hidden;
 .news__content{
   position: absolute;
   left: 0px; 
-  bottom: 0px;
+  bottom: 15px;
   left:0px;
   padding: 25px 30px;
   min-height: 140px;
 }
-/*Почему не встали в один ряд?*/
+/*
 .news__date{
     min-width: 200px;
-}
+}*/
 
 .news__date-month,.news__date-year{
 display: inline-block;
-font-family: OpenSans;
 font-size: 14px;
 line-height: 21px;
 color: #FFFFFF;
 }
  
 .news__subtitle{
-font-family: OpenSans;
 font-size: 24px;
 line-height: 36px;
 color: #FFFFFF;
 }
 
 .news__text{
-font-family: OpenSans;
 font-size: 16px;
 line-height: 21px;
 color: #FFFFFF;
@@ -399,7 +382,6 @@ color: #FFFFFF;
 
 
 .paginator__display,.paginator__display-current,.paginator__display-all{
-font-family: OpenSans;
 font-size: 16px;
 line-height: 20px;
 color: #FFFFFF;
@@ -410,30 +392,35 @@ color: #FFFFFF;
 }
 
 .paginator__link{
-font-family: OpenSans;
 font-size: 16px;
 line-height: 21px;
 display: block;
 align-items: center;
-color: #FFFFFF;
+/*color: #FFFFFF;*/
+/*margin-right: 25px;*/
+
+
+border-radius: 50%;
+color: red;
+padding:5px 10px ;
 text-decoration: none;
-margin-right: 25px;
+
 
 }
 
 /*Почему не сработало?*/
 .paginator__link:hover{
   background:#FFFFFF ;
-  border-radius: 50%;
+  /*border-radius: 50%;
   color: red;
   padding:5px 10px ;
-  text-decoration: none;
+  text-decoration: none;*/
 }
 
 
 
 
-/*блок не получился совсем */
+
 
 .about{
     margin-top:150px ;
@@ -473,25 +460,24 @@ margin-right: 25px;
 
 
   .about__content{
-    padding: 100px 90px;
-    position: absolute;
+    padding: 0px 90px;
+    position: relative;
+    /*position: absolute;
     width: 500px;
-    height: 380px;
+    height: 380px;*/
     
   }
   .about__text{
-    position: absolute;
-    margin-top: -30px;
-    font-family: OpenSans;
+    /*position: absolute;*/
+    padding-top: 30px;
     font-size: 36px;
     line-height: 42px;
     color: #000000;
   }
 
   .about__title{
-    bottom:100px ;
-    position: absolute;
-    font-family: OpenSans;
+    /*bottom:100px ;
+    position: absolute;*/
     font-size: 16px;
     line-height: 27px;
     color: #060606;
@@ -501,9 +487,7 @@ margin-right: 25px;
 
 
   .about__button{
-    position: absolute;
-    padding-bottom:280px ;
-    /*position: relative;*/
+    padding-bottom:100px ;
   }
 
   .about__button-text{
@@ -517,7 +501,6 @@ margin-right: 25px;
     padding: 18px 40px; 
     font-weight: 12px;
     text-decoration: none;
-    font-family: OpenSans;
     font-size: 14px;
     line-height: 16px;
     display: flex;
@@ -546,15 +529,15 @@ margin-right: 25px;
   }
   .footer__logo{
     position: absolute;
-    bottom:60px ;
+    bottom:70px ;
     left:0px ;
   }
  
   .footer__menu{
           position: absolute;
           display: inline-block;
-          bottom:60px;
-          left: 130px;;
+          bottom:80px;
+          left: 170px;;
         
       }
       
@@ -571,7 +554,7 @@ margin-right: 25px;
       .menu__item:last-child{
           margin-right: 0px;
       }
-      /* не подключились стили не знаю почему*/
+      
       .menu__link{
           top: 0px;
           font-family:OpenSans;
@@ -586,7 +569,7 @@ margin-right: 25px;
   .socials{ 
     position: relative;             
     margin-top:45px;
-    margin-left:650px;
+    margin-left:680px;
     margin-bottom: 3px;
   }
   
@@ -599,6 +582,11 @@ margin-right: 25px;
     margin-left:10px;
     display: inline-block;
   }
+
+  .social__item:first-child{
+    margin-left: 0;
+  }
+
   
   .social__item__tg{
   
@@ -625,7 +613,7 @@ margin-right: 25px;
   
   .contacts__graph-bottom{
     position: absolute;
-    bottom:84px;
+    bottom:100px;
     right: 0px;
     font-family:OpenSans;
     font-size: 13px;
@@ -642,8 +630,8 @@ margin-right: 25px;
   
   .contacts-bottom{
     position: absolute;
-    bottom: 58px;
-    right: 0px;      
+    bottom: 65px;
+    right: 40px;      
     font-family:OpenSans;
     font-size: 26px;
     line-height: 30px;
