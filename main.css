@@ -37,12 +37,24 @@ margin: 0;
     position: relative;
     height:150px;
     /*width: 1140px;*/
+    display: flex;
+    justify-content: space-between;
     }
+
+.header__col{
+display: flex;
+align-items: center;
+} 
+
+.header__col--align--right{
+  justify-content: flex-end;
+}
     
     
     
     
     .header__logo{
+        margin-right: 100px;
         position: absolute;
         left:0px;
         top:10px;
@@ -50,7 +62,7 @@ margin: 0;
     
     .menu{
         position: absolute;
-        display: inline-block;
+        display:  flex;
         top:25px;
         left:300px;
         transform: translate(-50%);
@@ -187,7 +199,9 @@ margin: 0;
  
 .features__list{
   padding-left:0px;
-  padding-top: 25px;    
+  padding-top: 25px;
+  display: flex;
+  justify-content: space-between;    
 }
 
 
@@ -197,7 +211,7 @@ margin: 0;
         width: 362px;
         height: 450px;
         background:#FFFFFF; 
-        margin-right: 15px;
+        margin-right: 20px;
         border-radius: 4px;
         }
 
@@ -234,8 +248,13 @@ padding-top: 0px;
 }
 
 
+.features__desk{
+  margin-top: 20px;
+}
+
+
 .features__desk-block{
-    width: 160px;
+    width: 170px;
     display: inline-block;
     padding-left: 22px;
     padding-right: 22px;
@@ -249,7 +268,7 @@ padding-top: 0px;
 
 .features__button{
   padding-left: 20px;
-  padding-top: 30px;
+  padding-top: 15px;
 }
 
 .features__button-text{
@@ -367,8 +386,10 @@ line-height: 21px;
 color: #FFFFFF;
 }
 
-.paginator__list,.paginator__display{
-    display: inline-block;   
+.paginator__list{
+    display: flex; 
+    justify-content: center;
+    
 }
 
 .paginator__item{
@@ -376,8 +397,11 @@ color: #FFFFFF;
 }
 
 .paginator{
+    display: flex;
+    justify-content:center;
     text-align: center;
     margin-top: 60px;
+    align-items: center;
 }
 
 
@@ -525,9 +549,26 @@ text-decoration: none;
     margin-bottom:50px ;
     position: relative;
     width: 1140px;
-    height: 150px;
+    height: 145px;
+    display: flex;
+    justify-content: space-between;
+
   }
+
+.footer__col{
+display: flex;
+align-items: center;
+} 
+
+.footer__col--align--right{
+  justify-content: flex-end;
+}
+
+
+
+
   .footer__logo{
+    margin-right: 100px;
     position: absolute;
     bottom:70px ;
     left:0px ;
@@ -567,7 +608,7 @@ text-decoration: none;
       }
   
   .socials{ 
-    position: relative;             
+    position: absolute;             
     margin-top:45px;
     margin-left:680px;
     margin-bottom: 3px;
@@ -609,13 +650,21 @@ text-decoration: none;
     display: block;
   }
   
+
+
+     
+  .contacts__footer{
+    position: absolute;
+    right: 0px; 
+    top:170px; 
+}
   
   
   .contacts__graph-bottom{
-    position: absolute;
+    width: 200px;
     bottom:100px;
     right: 0px;
-    font-family:OpenSans;
+    position: absolute;
     font-size: 13px;
     line-height: 16px;
     align-items: center;
@@ -629,10 +678,9 @@ text-decoration: none;
   
   
   .contacts-bottom{
+    bottom:65px;
+    right: 40px;
     position: absolute;
-    bottom: 65px;
-    right: 40px;      
-    font-family:OpenSans;
     font-size: 26px;
     line-height: 30px;
     align-items: center;
