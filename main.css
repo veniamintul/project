@@ -540,11 +540,21 @@ text-decoration: none;
     margin-left: 0px;
     border-top:solid 1px #FFFFFF;
     margin-bottom:50px ;
-    display: flex;
-    justify-content: space-between;
+    /*display: flex;*/
+    /*justify-content: space-between;*/
     align-items: center;
 
   }
+
+
+  .footer__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 0px;
+    
+  }
+
 
 .footer__col{
 display: flex;
@@ -579,7 +589,6 @@ align-items: center;
       
       .menu__link{
           top: 0px;
-          font-family:OpenSans;
           font-size: 14px;
           line-height: 16px;
           display: flex;
