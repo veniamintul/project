@@ -1,0 +1,92 @@
+body {
+    /*background: #001821 ;*/
+    background:   url('img privet/bg.png') center top 0  no-repeat;
+    margin:0px;
+    width:100%;
+    height:100%;
+    font-family: "Open Sans";  
+}
+* {
+  box-sizing: border-box;
+}
+
+ul, li{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+margin: 0;
+}
+
+
+.wrapper {
+  overflow-x: hidden;                  
+  min-height: 100%;
+  margin-top: 0px;
+ 
+
+}
+.container{
+  width: 1140px;
+  margin:0 auto;
+}
+
+
+.content{
+  min-height: 960px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  
+}
+
+.content__logo{
+  position: absolute;
+
+}
+
+
+
+.content__shades{
+  position: absolute;
+}
+
+.content__text{
+  position: absolute;
+  margin-top: 150px;
+}
+
+.content__title{
+  font-size: 18px;
+  line-height: 20px;
+  color: #FFFFFF;
+  font-style: normal;
+  text-decoration: none; 
+}
+
+.content__button{
+  background: #F5170E;
+  border-radius: 35px;
+  border: 1px;
+  border-style:solid;
+  border-color: #F5170E;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  padding: 18px 60px ; 
+  position: absolute;
+  margin-top: 310px;
+  }
+
+  .content__button-text{
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+
+  
+ 
