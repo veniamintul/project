@@ -1,3 +1,9 @@
+
+element.style{              /* для тега  html*/
+height: 100%;
+width: 100%;
+}
+
 body {
     /*background: #001821 ;*/
     background:   url('img privet/bg.png') center top 0  no-repeat;
@@ -21,12 +27,13 @@ margin: 0;
 }
 .wrapper {
   overflow-x: hidden;                  
-  min-height: 100%;
-  margin-top: 0px;
+  height: 100%;
+  /*margin-top: 0px;*/
 }
 .container{
   width: 1140px;
   margin:0 auto;
+  height: 100%;
 }
 .content{
   /*min-height: 960px;*/
